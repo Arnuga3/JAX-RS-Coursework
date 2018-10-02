@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Personal Diary Web App</title>
+    <link href="https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display" rel="stylesheet">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/custom.css"/>
+</head>
+
+<body>
+     <nav class="blue darken-4">
+	   <div class="nav-wrapper">
+	     <a href="/csAZelcs/" class="brand-logo left  white-text"><i class="material-icons prefix">dashboard</i>Web Diary</a>
+	   </div>
+	 </nav>
+	 
+	<div class="container">
+	 <div class="row">
+	 
+		<div class="col s12 m6">
+		  <div class="input-field">
+	          <i class="material-icons prefix">person_pin</i>
+	          <input id="userName" type="text" class="validate">
+	          <label for="userName">User:</label>
+	      </div>
+	      <div class="input-field">
+	          <i class="material-icons prefix">today</i>
+	          <input id="datepickerFrom" type="text" class="datepicker">
+	          <label for="datepickerFrom">From:</label>
+	      </div>
+	      <div class="input-field">
+	          <i class="material-icons prefix">date_range</i>
+	          <input id="datepickerTo" type="text" class="datepicker">
+	          <label for="datepickerTo">To:</label>
+          </div>
+          <div id="btn-group">
+			  <a class="waves-effect waves-light btn blue-grey lighten-3" id="showApTrigger">Show Appointment(s)</a>
+			  <a class="waves-effect waves-grey btn-flat" id="newApModalTrigger">Add Appointment</a> 
+          </div>         
+	    </div>
+	    
+		<div class="col s12 m6">
+			<div id="apContainer">
+				<!-- Appointments are going here -->
+				<ul  class="collection"></ul>
+			</div>
+		</div>
+	 </div>
+    </div>
+    
+    <!-- Modals -->
+	<div id="newApModal" class="modal modal-fixed-footer">
+	  <div class="modal-content">
+	    <h4>New Appointment</h4>
+		<div class="row">
+			<div class="col s12">
+				<div class="input-field">
+			    	<i class="material-icons prefix">description</i>
+				    <input id="apDescrNew" type="text" class="validate">
+				    <label for="apDescrNew">Description:</label>
+				</div>
+			</div>
+			<div class="col s12 m6">
+				<div class="input-field">
+					<i class="material-icons prefix">date_range</i>
+				    <input id="apDateNew" type="text" class="datepicker">
+				    <label for="apDateNew">Date:</label>
+				</div>
+			</div>
+			<div class="col s12 m6">
+				<div class="input-field">
+					<i class="material-icons prefix">access_time</i>
+				    <input id="apTimeNew" type="text" class="timepicker">
+				    <label for="apTimeNew">Time:</label>
+				</div>
+			</div>
+			<div class="col s12 m6">
+				<div class="input-field">
+					<i class="material-icons prefix">update</i>
+				    <input id="apDuratNew" type="number" class="validate">
+				    <label for="apDuratNew">Duration:</label>
+				</div>
+			</div>
+		</div>
+	  </div>
+	  <div class="modal-footer">
+	    <a href="#!" class="modal-action modal-close waves-effect waves-grey btn-flat">Cancel</a>
+	    <a href="#!" id="saveNewBtn" class="modal-action modal-close waves-effect waves-green btn blue-grey lighten-3">Save</a>
+	  </div>
+	</div>
+	
+	<div id="editApModal" class="modal modal-fixed-footer">
+	  <div class="modal-content">
+	    <h4>Edit/Delete Appointment</h4>
+	    <input type="hidden"/>
+		<div class="row">
+			<div class="col s12">
+				<div class="input-field">
+			    	<i class="material-icons prefix">description</i>
+				    <input id="apDescr" type="text" class="validate">
+				    <label for="apDescr">Description:</label>
+				</div>
+			</div>
+			<div class="col s12 m6">
+				<div class="input-field">
+					<i class="material-icons prefix">date_range</i>
+				    <input id="apDate" type="text" class="datepicker">
+				    <label for="apDate">Date:</label>
+				</div>
+			</div>
+			<div class="col s12 m6">
+				<div class="input-field">
+					<i class="material-icons prefix">access_time</i>
+				    <input id="apTime" type="text" class="timepicker">
+				    <label for="apTime">Time:</label>
+				</div>
+			</div>
+			<div class="col s12 m6">
+				<div class="input-field">
+					<i class="material-icons prefix">update</i>
+				    <input id="apDurat" type="number" class="validate">
+				    <label for="apDurat">Duration:</label>
+				</div>
+			</div>
+		</div>
+	  </div>
+	  <div class="modal-footer">
+	    <a href="#!" id="apDeleteBtn" class="modal-action modal-close waves-effect waves-red btn grey lighten-3 left red-text"><i class="material-icons prefix">delete_forever</i></a>
+	    <a href="#!" class="modal-action modal-close waves-effect waves-grey btn-flat">Cancel</a>
+	    <a href="#!" id="apUpdateBtn" class="modal-action modal-close waves-effect waves-green btn blue-grey lighten-3">Update</a>
+	  </div>
+	</div>
+ 
+    
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+</body>
+
+</html>

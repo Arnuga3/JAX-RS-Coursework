@@ -1,0 +1,80 @@
+html {
+    font-family: GillSans, Calibri, Trebuchet, sans-serif;
+ }
+ 
+ .nav-wrapper > a {
+ 	margin-left: 15px;
+ 	font-family: 'Sedgwick Ave Display', cursive;
+ }
+ 
+/* label focus color */
+.input-field input:focus + label {
+     color: #999 !important;
+}
+/* label underline focus color */
+.input-field input:focus,
+.input-field input.valid {
+  border-bottom: 1px solid #aaa !important;
+  box-shadow: 0 0 0 0 #aaa !important;
+}
+
+/* invalid color */
+.input-field input.invalid {
+  	border-bottom: 1px solid red;
+  	box-shadow: 0 1px 0 0 red;
+}
+
+.input-field .prefix.active {
+    color: #b0bec5;
+}
+
+.input-field .prefix {
+    color: #b0bec5;
+}
+
+.container * {
+	margin: 0;
+}
+
+.container {
+	margin-top: 25px;
+}
+
+#btn-group {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.btn, .btn-flat {
+	margin-top: 15px;
+}
+
+.btn-flat {
+	margin-bottom: 25px;
+}
+
+#apContainer {
+	border: 1px solid #ccc;
+	background-color: #eceff1;
+	min-height: 300px;
+    -moz-box-shadow:    inset 0 0 15px #b0bec5;
+    -webkit-box-shadow: inset 0 0 15px #b0bec5;
+    box-shadow:         inset 0 0 15px #b0bec5;
+    border-radius: 2px;
+    padding: 5px;
+}
+
+.modal .modal-content * {
+	margin: 0px;
+}
+
+#newApModal h4,
+#editApModal h4 {
+	margin-bottom: 25px;
+}
+
+#newApModal .row > div,
+#editApModal .row > div {
+	padding: 0;
+}
